@@ -2,23 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Landing Page</title>
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- script -->
+    <script src="scripts/navigation.js" defer></script>
   </head>
 
   <body>
     <!-- navigation menu list -->
-    <header class="navbar">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <header class="site-header">
+      <nav class="site-navigation" id="site-navigation">
+        <button
+          class="menu-toggle"
+          aria-controls="header-menu"
+          aria-expanded="false"
+          aria-label="Menu Toggle"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+          >
+            <title>Menu Icon</title>
+            <path
+              d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"
+            ></path>
+          </svg>
+        </button>
+
+        <ul class="nav-menu" id="header-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
+
     <main>
       <section class="name">
         <h1 id="home">PRIYA TYAGI</h1>

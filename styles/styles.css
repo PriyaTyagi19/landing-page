@@ -1,3 +1,24 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
 
 /* Typography
 --------------------------------------------- */
@@ -32,10 +53,10 @@ section {
   padding: 0 1rem;
 }
 
-img{
+/* img{
     max-height: 40rem;
     max-width: auto;
-}
+} */
 
   /* Links
 --------------------------------------------- */
@@ -58,14 +79,79 @@ a:focus {
 
 /* header */
 /* navigation menu */
-.navbar {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3rem;
-    font-weight: 600;
-    padding: 0 2rem;
-    margin: 1rem 1rem;
-    box-shadow: 0px 0px 2px 1px #d3d3d3;
-    
+
+.site-header {
+	padding: 0 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+
+.site-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	display: none;
+	position: absolute;
+	top: 4.5rem;  
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: #fff;
+}
+
+.site-navigation.toggled ul {
+	display: block;
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #282828;
+}
+
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+	padding: 1rem;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+
+@media (min-width: 50em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-navigation {
+		flex: 1 1 auto;
+		padding: 0 1rem;
+	}
+
+	.site-navigation ul,
+	.site-navigation.toggled ul {
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		top: 0;
+	}
+
+	.site-navigation a {
+		line-height: 4.5rem; 
+		padding: 0 1rem;
+	}
+
 }
 
 /* main */
@@ -78,20 +164,19 @@ a:focus {
     background-color: #ef9cb8;
 }
 
-.name h1{
-    font-size: 10rem;
-}
+
+
 
 /* about section */
 
 .about h2{
-    font-size: 5rem;
+    
     text-align: center;
     font-weight: 600;
 }
 
 .about p{
-    font-size: 3rem;
+   
     font-weight: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: left;
