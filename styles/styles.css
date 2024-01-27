@@ -57,18 +57,22 @@ section {
 --------------------------------------------- */
 a,
 a:visited {
-  color: #008000;
   text-decoration: none;
+  color: #6c8be9;
 }
 
 a:hover,
-a:focus,
+a:focus {
+  color: #ec8d8d;
+}
+
 a:active {
   text-decoration: underline;
+  color: #ec8d8d;
 }
 
 a:focus {
-  outline: 2px dotted;
+  outline: 2px dotted #000000;
 }
 
 /* header */
@@ -79,9 +83,16 @@ a:focus {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: #f5f5dc;
+  background-color: #fadae6;
   width: 100%;
   padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header img{
+  width: 7rem;
+  height: 5rem;
 }
 
 .site-navigation ul {
@@ -95,7 +106,7 @@ a:focus {
   left: 0;
   right: 0;
   z-index: 2;
-  background-color: #f5f5dc;
+  background-color: #fadae6;
 }
 
 .site-navigation.toggled ul {
@@ -154,6 +165,7 @@ a:focus {
 .name {
   position: relative;
   padding: 0;
+ 
 }
 
 .name h1 {
@@ -173,78 +185,67 @@ a:focus {
 .name img {
   display: block;
   object-fit: cover;
-  min-height: 25rem;
-  
-}
-
-@media (min-width: 50em) {
-
-  .name img{
-
-    max-width: 100%;
-    
-    /* background-size: cover; */
-  }
-	
+  height: 25rem;
+  width: 100%;
 }
 
 /* about section */
 
 .section-about {
-  
   margin: 0;
-  background-color: #f5f5dc;
+  background-color: #fadae6;
 }
 .section-about h2 {
-  margin: 0;
+  margin:0;
+  padding: 1rem;
   text-align: center;
   font-weight: 600;
-  font-size: 2rem;
+  
 }
 
 .section-about p {
   line-height: 2;
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
   margin-bottom: 0;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 50em) {
-
-	.section-about p{
-    
-   max-width: 50%;
-   margin: 1rem auto 0;
+  .section-about p {
+    max-width: 50%;
+    margin: 1rem auto 0;
   }
-	
 }
 /* section project */
 
 .section-project {
-  background-color: #ddeff6;
+  background-color: #c8dff4;
   margin-top: 0;
- padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 .section-project h2 {
   margin-top: 0;
   padding-top: 1rem;
 }
 .section-article {
-
   margin: 2rem auto;
-  box-shadow: 0px 0px 3px 3px #c3c1c1;
+  box-shadow: 0px 0px 3px 3px #aaa9a9;
   border-radius: 30px;
-  background-color:#f3f3e5;
+  background-color: #fadae6;
+  opacity: 0.5;
+  max-width: 12.75rem;
+  height: 22rem;
 }
 
 .section-article img {
   border-radius: 30px;
 }
-.section-article h3{
+.section-article h3 {
   font-size: 1.5rem;
 }
-.section-article a,
-a:visited{
-   text-decoration: none;
+
+.section-article:hover {
+  opacity: 1;
 }
 
 .text-style {
@@ -257,90 +258,73 @@ a:visited{
 }
 
 @media (min-width: 50em) {
-
-	.section-project {
-   
+  .section-project {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 0 5rem;
-}
-.section-article{
-  
-  max-width: 18.75rem;
-}
-.style-article{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  
-}
-
-.section-article a,
-a:hover{
-   text-decoration: none;
-}
+    padding: 0 10rem;
+  }
+  .style-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  .section-article{
+    margin: 0;
+  }
 }
 /* contact section */
 
-.section-contact{
-	background-color: #f5f5dc;
-	text-align: center;
+.section-contact {
+  background-color: #fadae6;
+  text-align: center;
   margin-top: 0;
-	padding-top:1rem ;
-	
+  padding-top: 1rem;
 }
 
-.section-contact p{
-	margin-bottom: 0.5rem;
-	font-size: 1.2rem;
+.section-contact h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
-.contact-talk a{
-	
-	 font-weight: 600;
-  padding: .5rem 1rem;
-	background-color: #e3dba4;
-	color: #111010;
-	text-decoration: none;
-	
+.contact-talk a {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: #f1a4c0;
+  color: #111010;
+  text-decoration: none;
 }
 
-.icons-style{
-	
-	list-style-type: none;
-	text-align: center;
-  padding:.5rem 0 ;
-  margin: 1.5rem  0 0;
+.icons-style {
+  list-style-type: none;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 1.5rem 0 0;
 }
-.icons-style li{
-	display: inline;
-	margin: 0 1rem;
-  
-  
+.icons-style li {
+  display: inline;
+  margin: 0 1rem;
 }
 
 @media (min-width: 50em) {
-
-	.section-contact {
-   
+  .section-contact {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-   
-}
-
+  }
 }
 
 /* footer */
-.footer{
+.footer {
   margin-top: 0;
-  background-color: #f5f5dc;
+  background-color: #fadae6;
 }
 
 .footer p {
   text-align: center;
   margin: 0;
- padding: 1rem;
+  padding: 1rem;
 }
